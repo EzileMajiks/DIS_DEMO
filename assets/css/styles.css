@@ -1,3 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* 1. Box Sizing and Margin Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Base Body Styles */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #222222;
+  background-color: #fcfcfc;
+}
+
+/* 3. Media Defaults */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 4. Link Defaults */
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 5. List Defaults */
+ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 6. Layout Containers */
+header, main, footer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* 7. Typography and Spacing */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111111;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+
+
 h1{
     color: brown;
     text-transform: capitalize;
@@ -9,4 +75,222 @@ p{
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
+}
+#myParagraph{
+    color: peru;
+    text-transform: capitalize;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style:normal;
+    text-decoration: underline;
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li span{
+    font-weight: bold;
+}
+
+/*Styling the Images*/
+/* Container layout using CSS Grid */
+.team {
+  display: grid;
+  /* Automatically adjusts column count based on screen width (min 250px per card) */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual team member card styling */
+.team > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive, fluid image sizing */
+.team img {
+  width: 100%;
+  max-width: 200px; /* Limits size on large screens */
+  aspect-ratio: 1 / 1; /* Keeps the image perfectly square */
+  object-fit: cover; /* Prevents stretching/distortion */
+  border-radius: 50%; /* Optional: Makes the profile images circular */
+  margin-bottom: 1rem;
+}
+
+/* Text and typography alignment */
+.team p {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #333333;
+  margin: 0;
+}
+
+/*Styling the forms and maps*/
+/* 1. Global Box Sizing & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* 2. Container Constraints */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 3. Navigation Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav {
+    background-color: #222;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+/* 4. Layout & Typography Components */
+section {
+    padding: 20px 0;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #111;
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin-top: 20px;
+}
+
+/* 5. Crucial Fix: Responsive Iframe (Google Map) */
+iframe {
+    width: 100% !important; /* Overrides the HTML inline width="1000" attribute */
+    max-width: 100%;
+    border-radius: 6px;
+    height: 350px; /* Accessible standard height for smaller screens */
+}
+
+/* 6. Responsive Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* 7. Tablet and Desktop Adjustments (Screens over 600px) */
+@media (min-width: 600px) {
+    body {
+        padding: 40px 20px;
+    }
+    
+    main {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    iframe {
+        height: 450px; /* Restores preferred height on larger displays */
+    }
+
+    nav a {
+        margin: 0 15px;
+        font-size: 1rem;
+    }
 }
